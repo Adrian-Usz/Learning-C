@@ -3,6 +3,34 @@
 #include <time.h>
 #include <math.h>
 #include <ctype.h>
+#include <conio.h>
+
+
+//Function prototypes
+
+int aFunction(int, int);
+
+int aFunction(int1, int2) {
+	return int1 + int2;
+}
+
+
+
+
+
+void printSomething() {
+	printf("\nThis method prints something random.");
+}
+int doubleNumber(int n) {
+	return n * 2;
+}
+
+//Function with pointer
+
+void doubleNumPointer(int* a) {
+	*a = *a + 2;
+	printf("\n%d", *a);
+}
 
 int main() {
 	// How to print two numbers in C in one printf
@@ -29,9 +57,28 @@ int main() {
 	
 	// How to make a randomNumber generator in C
 
-	int randomNumber = rand() % 20 + 1; // randomInt between 1 and 20 
- 	printf("\n%d : A random number ", randomNumber); 
+	printf("\nA random number: %d", rand());
 
 
+
+	// functions
+
+	printf("\n");
+	printSomething();
+	printf("\n%d", doubleNumber(2));
+
+	int a = 10; // using pointers can save memory so it doesn't need to allocate more ram for stuff like arrays
+	int b = 20;
+	int* ptr = &a;
+	printf("\n\n");
+	doubleNumPointer(ptr);
+	printf("\n");
+	doubleNumPointer(&b);
+
+	//Testing
+
+	//char* str = "Hello";
+	//printf("\n\n");
+	//printf(str);
 
 }
